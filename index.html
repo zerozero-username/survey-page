@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="zerozero_username">
+    <meta name="description" content="portfolio project">
+    <title>Survey Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="scss/main.css" rel="stylesheet">
+</head>
+<body>   
+    
+    <form id="survey-form" class="survey-form">
+        <h1 id="title">Survey</h1>
+                
+                <p id="description">
+                    This is a short test to see how to make an interactive form
+                </p>
+    
+        
+        <section>
+            <fieldset>
+                <div class="form-title">
+                    <h2>Contact Info</h2>
+                    <p>* required fields</p>
+                </div>
+                <ul>
+                    <li>
+                        <label for="name" id="name-label">name</label>
+                        <input type="text" required id="name" name="name" placeholder="insert your name" alt="insert your name">
+                    </li>              
+                    <li>
+                        <label for="email" id="email-label">email</label>          
+                        <input type="email" required id="email" name="email" placeholder="insert your email" alt="insert your email">
+                    </li> 
+                    <li>
+                        <label for="username" id="username-label">username</label>
+                        <input type="text" maxlength="12" minlength="6" required id="username" name="username" 
+                        placeholder="create a username" alt="insert a username between 6 and 12 characters">
+                    </li>
+                </ul>      
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <div class="form-title">
+                    <h2></h2>
+                </div>
+                <ul>
+                    <li>
+                        <label for="number" id="number-label">Choose one of the images</label>
+                        <input type="number" min="1" max="4" name="img-rate" id="number" name="number" placeholder="insert a number" alt="insert a number">
+                    </li>
+                    <li>
+                        <div class="img-wrapper">
+                            <label for="item-1">
+                                1
+                            <img id="item-1" class="img-item" src="img(local)/mountains/asoggetti-zxcBR3zNc7I-unsplash.jpg">
+                            </label>
+                            <label for="item-2">
+                                2
+                            <img id="item-2" class="img-item" src="img(local)/mountains/eberhard-grossgasteiger-GWoLvxxjSzs-unsplash.jpg">
+                            </label>
+                            <label for="item-3">
+                                3
+                            </label>
+                                <img id="item-3" class="img-item" src="img(local)/mountains/jeremy-bishop-dvACrXUExLs-unsplash.jpg">
+                            <label for="item-1">
+                                4
+                                <img id="item-4" class="img-item" src="img(local)/mountains/kurt-cotoaga-cqbLg3lZEpk-unsplash.jpg">
+                            </label>   
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-wrapper">
+                            <label for="img-radio-1">
+                                <img class="img-item" src="img(local)/fun/alan-bishop-gjshuj_QB2s-unsplash.jpg">
+                                <input type="radio" name="img-radio-1" id="img-radio-1">
+                            </label>
+                            <label for="img-radio-2">
+                                    <img class="img-item" src="img(local)/fun/andrea-enriquez-cousino-4hBCxfrlpoM-unsplash.jpg">
+                                    <input type="radio" name="img-radio-2" id="img-radio-2">
+                            </label>
+                            <label for="img-radio-3">
+                                    <img class="img-item" src="img(local)/fun/andrew-guan-AkNd24WMuj8-unsplash.jpg">
+                                    <input type="radio" name="img-radio-3" id="img-radio-3">
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                    
+                    </li>
+                </ul>
+            </fieldset>
+        </section>
+        <section id="about">
+            <h3>All images used come from <a href="https://unsplash.com/">Unsplash</a></h3>
+        </section>
+    </form>
+
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>    
+</body>
+</html>

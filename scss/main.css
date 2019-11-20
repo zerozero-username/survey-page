@@ -1,0 +1,48 @@
+html {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #2b2c28;
+  color: color(fg-color);
+}
+i .material-icons.md-18 {
+  font-size: 18px;
+}
+i .material-icons.md-24 {
+  font-size: 24px;
+}
+i .material-icons.md-36 {
+  font-size: 36px;
+}
+i .material-icons.md-48 {
+  font-size: 48px;
+}
+i .material-icons.md-64 {
+  font-size: 64px;
+}
+i .material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+i .material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+i .material-icons.md-light {
+  color: #fff;
+}
+i .material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+.img-wrapper {
+  padding: 2em;
+  align-content: center;
+  justify-content: center;
+}
+.img-wrapper .img-item {
+  border-radius: 999em;
+  height: 12em;
+  width: 12em;
+}

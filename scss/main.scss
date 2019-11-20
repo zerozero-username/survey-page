@@ -1,0 +1,90 @@
+//color maps
+$main_colors: (
+    'bg-color':#2B2C28,
+    'fg-color':#FFFAFB
+);
+
+$accent-colors: (
+    'a-accent-color':#339989,
+    'b-accent-color':#F76F8E,
+    'c-accent-color':#131515
+);
+
+// functions
+@function main-color($key) {
+    @if color-map($main-colors, $key) {
+        @return map-get($main-colors, $key);
+    }
+}
+
+@function accent-color($key) {
+    @if color-map($accent-colors, $key) {
+        @return map-get($accent-colors, $key);
+    }
+}
+
+// basic settings
+html {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: main-color(bg-color);
+    color: color(fg-color);
+}
+
+// material icons
+i {
+    .material-icons.md-18 {
+        font-size: 18px;
+    }
+
+    .material-icons.md-24 {
+        font-size: 24px;
+    }
+
+    .material-icons.md-36 {
+        font-size: 36px;
+    }
+
+    .material-icons.md-48 {
+        font-size: 48px;
+    }
+
+    .material-icons.md-64 {
+        font-size: 64px;
+    }
+
+    .material-icons.md-dark { 
+        color: rgba(0, 0, 0, 0.54); 
+    }
+    .material-icons.md-dark.md-inactive { 
+        color: rgba(0, 0, 0, 0.26); 
+    }
+
+    .material-icons.md-light { 
+        color: rgba(255, 255, 255, 1); 
+    }
+
+    .material-icons.md-light.md-inactive { 
+        color: rgba(255, 255, 255, 0.3); 
+    }
+}
+
+.img-wrapper {
+    padding: 2em;
+    align-content: center;
+    justify-content: center;
+
+    .img-item {
+        border-radius: 999em;
+        height: 12em;
+        width: 12em;
+    }
+
+}
+
