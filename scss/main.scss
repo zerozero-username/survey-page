@@ -1,13 +1,13 @@
-//color maps
+// color maps
 $main_colors: (
-    'bg-color':#2B2C28,
-    'fg-color':#FFFAFB
+    'bg-color':#131314,
+    'fg-color':#FFFAFF
 );
 
 $accent-colors: (
-    'a-accent-color':#339989,
-    'b-accent-color':#F76F8E,
-    'c-accent-color':#131515
+    'a-accent-color':#3E92CC,
+    'b-accent-color':#D8315B,
+    'c-accent-color':#FED766
 );
 
 // functions
@@ -22,69 +22,238 @@ $accent-colors: (
         @return map-get($accent-colors, $key);
     }
 }
+// mixins
+@mixin centralize {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
 
-// basic settings
+@mixin txt-transform {
+    letter-spacing: 0.1rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+}
+
+@mixin input-custom {
+    appearance: none;
+    padding: 0.4rem;
+}
+
+@mixin effect-1 {
+    transition: ease-out 0.35s;
+
+    &:hover, &:invalid, &:valid {
+        transition: ease-in 0.35s;
+    }
+}
+
+//start
 html {
-    display: flex;
+}
+body { 
+
+    @include centralize;
+
+    background: repeating-linear-gradient(
+    -45deg,
+    main-color(bg-color) ,
+    main-color(bg-color) 1px,
+    accent-color(a-accent-color) 2px,
+    accent-color(a-accent-color) 40px,
+    accent-color(a-accent-color) 20px
+
+    );
+    display: flex; 
+    font-family: monospace;
     margin: 0;
     padding: 0;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background: main-color(bg-color);
-    color: color(fg-color);
-}
-
-// material icons
-i {
-    .material-icons.md-18 {
-        font-size: 18px;
-    }
-
-    .material-icons.md-24 {
-        font-size: 24px;
-    }
-
-    .material-icons.md-36 {
-        font-size: 36px;
-    }
-
-    .material-icons.md-48 {
-        font-size: 48px;
-    }
-
-    .material-icons.md-64 {
-        font-size: 64px;
-    }
-
-    .material-icons.md-dark { 
-        color: rgba(0, 0, 0, 0.54); 
-    }
-    .material-icons.md-dark.md-inactive { 
-        color: rgba(0, 0, 0, 0.26); 
-    }
-
-    .material-icons.md-light { 
-        color: rgba(255, 255, 255, 1); 
-    }
-
-    .material-icons.md-light.md-inactive { 
-        color: rgba(255, 255, 255, 0.3); 
-    }
-}
-
-.img-wrapper {
-    padding: 2em;
+form {
+    
+    flex-grow: 0.5;
+    flex-shrink: 1;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    margin: 1.65em 1em 1em 1em;
+    height: auto;
+    width: auto;
+    overflow: hidden;
 
-    .img-item {
-        border-radius: 999em;
-        height: 12em;
-        width: 12em;
+    
+
+    .main-style {
+
+        @include centralize;
+        @include txt-transform;
+
+        background: main-color(bg-color);
+        border-top: solid 0.5em accent-color(c-accent-color);
+        border-bottom: solid 0.5em accent-color(c-accent-color);
+        border-left: none;
+        border-right: none;
+        padding: 2em;
+
+        section {
+
+            @include centralize;
+
+            border: none;
+            color: main-color(fg-color);
+
+            fieldset.contact {
+
+                @include centralize;
+
+                display: flex;
+                flex-direction: column;
+                border: none;
+
+                label {
+                    font-weight: bolder;
+                    font-size: 0.9rem;
+                }
+
+                input {
+
+                    @include centralize;
+                    @include effect-1;
+                    @include input-custom;
+                    @include txt-transform;
+                    
+                    background: none;
+                    border: solid 0.12em main-color(fg-color);
+                    border-radius: 999em;
+                    color: main-color(fg-color);
+                    font-size: 0.95rem;
+                    font-weight: bolder;
+                    width: 12em;
+                    margin: 0 2em 0 2em;
+
+                    &:hover {
+                        border-color:accent-color(a-accent-color);
+                    }
+
+                    &:invalid {
+                        border-color:accent-color(b-accent-color);
+                        box-shadow: none;
+                    }
+
+                    &:valid {
+                        border-color:accent-color(c-accent-color);
+                        box-shadow: none;
+                    }
+                }
+    
+            }
+
+            fieldset.questions {
+
+                border: none;
+                margin: 2em 0 0 0;
+
+                select {
+
+                    @include input-custom;
+                    @include txt-transform;
+
+                    background: main-color(bg-color);
+                    border: solid 0.12rem main-color(fg-color);
+                    border-radius: 90em;
+                    color: main-color(fg-color);
+                    text-align: center;
+                    width: 8rem;
+                    
+                }
+
+                .icons {
+
+                    @include centralize;
+                    
+                    font-size: 1.5rem;
+                    margin: 0.3em;
+                    padding: 0.5em 0 0.5em 0.65em;
+                }
+
+                input[type=radio] {
+
+                    @include effect-1;
+                    @include input-custom;
+
+                    border: 0.2em solid main-color(fg-color);
+                    border-radius: 999em;
+
+                    &:checked, &:hover {
+
+                        @include effect-1;
+
+                        background: accent-color(a-accent-color);
+                        border-color: accent-color(a-accent-color);
+                    }
+                }
+
+                input[type=checkbox] {
+
+                    @include effect-1;
+                    @include input-custom;
+
+                    border: 0.2em solid main-color(fg-color);
+
+                    &:checked, &:hover {
+
+                        @include effect-1;
+
+                        background: accent-color(b-accent-color);
+                        border-color: accent-color(c-accent-color);
+                    }
+                }
+
+                textarea {
+
+                    @include txt-transform;
+
+                    background: main-color(bg-color);
+                    border: solid 0.2em main-color(fg-color);
+                    border-radius: 0;
+                    color: main-color(fg-color);
+                    height: auto;
+                    width: 24rem;
+                    padding: 1rem;
+                    resize: none;
+                }
+
+                button {
+
+                    @include effect-1;
+                    @include input-custom;
+                    @include txt-transform;
+
+                    background: main-color(bg-color);
+                    border: solid 0.17em main-color(fg-color);
+                    border-radius: 999em;
+                    color: main-color(fg-color);
+                    font-weight: bolder;
+                    width: 8em;
+
+                    &:hover {
+
+                        @include effect-1;
+
+                        background: accent-color(b-accent-color);
+                        border-color: accent-color(b-accent-color);
+                        color: main-color(bg-color);
+                    }
+                }
+
+            }
+
+        }
+        
     }
 
 }
-
