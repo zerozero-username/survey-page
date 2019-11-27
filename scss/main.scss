@@ -7,7 +7,7 @@ $main_colors: (
 $accent-colors: (
     'a-accent-color':#3E92CC,
     'b-accent-color':#D8315B,
-    'c-accent-color':#FED766
+    'c-accent-color':#ffc13c
 );
 
 // functions
@@ -45,6 +45,9 @@ $accent-colors: (
             color: main-color(fg-color);
             border: none;
             border-radius: 0.5rem;
+            text-transform: uppercase;
+            font-weight: bolder;
+            letter-spacing: 0.2rem;
 
             label {
                 display: inline-flex;
@@ -56,6 +59,7 @@ $accent-colors: (
                 &.icons {
                     position: relative;
                     margin-top: -0.7rem;
+                    font-size: 1.75rem;
                     top: 1rem;
 
                     input[type=radio] {
@@ -63,15 +67,47 @@ $accent-colors: (
                         margin: 1rem 0 0 0.5rem;
                         appearance: none;
                         border: dashed 0.3rem main-color(fg-color);
+                        border-radius: 99rem;
                         background: main-color(fg-color);
                         width: 1.3rem;
                         height: 1.3rem;
                         justify-content: center;
                         top: 1rem;
                         transform: translate(0.2rem, -1rem);
+                        transition: ease 0.5s;
 
                         &:checked {
                             background: accent-color(b-accent-color);
+                            transition: ease-in 0.34s;
+                        }
+
+                        &:hover {
+                            background: accent-color(a-accent-color);
+                            transition: ease-in-out 0.5s;
+                        }
+                    }
+                    
+                    input[type=checkbox] {
+                        align-content: center;
+                        margin: 1rem 0 0 0.5rem;
+                        appearance: none;
+                        border: solid 0.3rem main-color(fg-color);
+                        background: main-color(fg-color);
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        justify-content: center;
+                        top: 1rem;
+                        transform: translate(0.2rem, -1rem);
+                        transition: ease 0.5s;
+
+                        &:checked {
+                            background: accent-color(a-accent-color);
+                            transition: ease-in 0.34s;
+                        }
+
+                        &:hover {
+                            background: accent-color(c-accent-color);
+                            transition: ease-in-out 0.5s;
                         }
                     }
                 

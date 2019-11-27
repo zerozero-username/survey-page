@@ -21,6 +21,9 @@
   color: #FFFAFF;
   border: none;
   border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
 }
 
 .main-style section fieldset label {
@@ -42,6 +45,7 @@
 .main-style section fieldset label.icons {
   position: relative;
   margin-top: -0.7rem;
+  font-size: 1.75rem;
   top: 1rem;
 }
 
@@ -53,6 +57,7 @@
      -moz-appearance: none;
           appearance: none;
   border: dashed 0.3rem #FFFAFF;
+  border-radius: 99rem;
   background: #FFFAFF;
   width: 1.3rem;
   height: 1.3rem;
@@ -62,10 +67,53 @@
   top: 1rem;
   -webkit-transform: translate(0.2rem, -1rem);
           transform: translate(0.2rem, -1rem);
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
 }
 
 .main-style section fieldset label.icons input[type=radio]:checked {
   background: #D8315B;
+  -webkit-transition: ease-in 0.34s;
+  transition: ease-in 0.34s;
+}
+
+.main-style section fieldset label.icons input[type=radio]:hover {
+  background: #3E92CC;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.main-style section fieldset label.icons input[type=checkbox] {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 1rem 0 0 0.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: solid 0.3rem #FFFAFF;
+  background: #FFFAFF;
+  width: 1.3rem;
+  height: 1.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 1rem;
+  -webkit-transform: translate(0.2rem, -1rem);
+          transform: translate(0.2rem, -1rem);
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.main-style section fieldset label.icons input[type=checkbox]:checked {
+  background: #3E92CC;
+  -webkit-transition: ease-in 0.34s;
+  transition: ease-in 0.34s;
+}
+
+.main-style section fieldset label.icons input[type=checkbox]:hover {
+  background: #ffc13c;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .main-style section fieldset input {
