@@ -23,3 +23,79 @@ $accent-colors: (
     }
 }
 // mixins
+
+.main-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 2rem;
+    margin-top: 1.4rem;
+    border: none;
+
+    section {
+        padding: 1rem;
+        
+
+        fieldset {
+            padding: 2rem 4rem 2rem 4rem;
+            margin: 1rem 0 1rem 0;
+            background: main-color(bg-color);
+            color: main-color(fg-color);
+            border: none;
+            border-radius: 0.5rem;
+
+            label {
+                display: inline-flex;
+                align-content: center;
+                justify-content: center;
+                flex-flow: row wrap;
+                margin: 0.5rem;
+
+                &.icons {
+                    position: relative;
+                    margin-top: -0.7rem;
+                    top: 1rem;
+
+                    input[type=radio] {
+                        align-content: center;
+                        margin: 1rem 0 0 0.5rem;
+                        appearance: none;
+                        border: dashed 0.3rem main-color(fg-color);
+                        background: main-color(fg-color);
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        justify-content: center;
+                        top: 1rem;
+                        transform: translate(0.2rem, -1rem);
+
+                        &:checked {
+                            background: accent-color(b-accent-color);
+                        }
+                    }
+                
+                }
+                
+            }
+
+            
+            input {
+                
+                border: none;
+                border-radius: 0.3rem;
+                padding: 0.7rem;
+                
+            }
+
+            
+
+            textarea {
+                border: none;
+                border-radius: 0.3rem;
+                padding: 2rem;
+                margin: 2rem 0 1rem 0;
+            }
+        }
+    }
+}

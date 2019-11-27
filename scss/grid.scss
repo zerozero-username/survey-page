@@ -23,8 +23,14 @@ textarea {
     font-size: 100%;
     display: flex;
     flex: 0 1 auto;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
 }
 
+button {
+    flex-grow: 1;
+    width: 50%;
+}
 
 
