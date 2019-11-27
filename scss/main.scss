@@ -110,6 +110,12 @@ $accent-colors: (
                             transition: ease-in-out 0.5s;
                         }
                     }
+
+                    select {
+                        appearance: none;
+                        background: main-color(bg-color);
+                        color: main-color(fg-color);
+                    }
                 
                 }
                 

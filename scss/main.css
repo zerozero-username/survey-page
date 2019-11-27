@@ -116,6 +116,14 @@
   transition: ease-in-out 0.5s;
 }
 
+.main-style section fieldset label.icons select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #131314;
+  color: #FFFAFF;
+}
+
 .main-style section fieldset input {
   border: none;
   border-radius: 0.3rem;
