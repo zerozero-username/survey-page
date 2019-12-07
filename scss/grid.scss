@@ -1,36 +1,60 @@
 *,
-*::before,
-*::after {
-    box-sizing: border-box;
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	text-decoration: none;
 }
 
-html,
-body,
-form,
-fieldset,
-section,
-h1,
-p,
-label,
-input,
-select,
-option,
-button,
-textarea {
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-    font-size: 100%;
-    display: flex;
-    flex: 0 1 auto;
-    flex-flow: column wrap;
-    align-content: center;
-    justify-content: center;
+body {
+	height: 100% !important;
+	width: 100% !important;
 }
 
-button {
+.page {
+	display: inline-flex;
+	flex-direction: row;
+    flex-wrap: wrap;
     flex-grow: 1;
-    width: 50%;
-}
+    justify-content: center;
+    text-align: justify;
+    
+    .form {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background: grey;
 
+        .fieldset {
+            padding: 2.4rem;
+            
+            .section {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+
+                .card-label {
+                    text-transform: uppercase;
+                    margin: 0.6rem 0 0.6rem 0;
+                }
+
+                .txt {
+                    position: absolute;
+                    margin: 0.4rem 0 0.4rem 0;
+                    left: 35%;
+                }
+            }
+
+            .description {
+                text-transform: capitalize;
+                font-weight: bolder;
+            }
+        }
+    }
+}
 

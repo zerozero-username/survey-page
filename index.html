@@ -11,68 +11,69 @@
     <link href="scss/grid.css" rel="stylesheet">
     <link href="scss/main.css" rel="stylesheet">
 </head>
-<body>   
-    <form id="survey-form">
-        <fieldset class="main-style">
-            <section>
-                <h1 id="title">SURVEY</h1>
-                <p id="description">* Required fields</p>
-
-                <fieldset class="contact">
-                    <label id="name-label" for="name">name</label>
-                    <input type="text" required placeholder="insert your name" id="name">
-                    <br>
-                    <label id="email-label" for="email">email</label>
-                    <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="insert your email" id="email">
-                    <br>
-                    <label id="number-label" for="number">ID</label>
-                    <input type="number" required pattern=“^[0–9]$” min="1" max="99" placeholder="user ID" id="number">
-                </fieldset>
-                <fieldset class="questions">
-                    <label>choose a color</label>
-                    <select id="dropdown">
-                        <option value="black">black</option>
-                        <option value="white">white</option>
-                        <option value="red">red</option>
-                        <option value="blue">blue</option>
-                        <option value="yellow">yellow</option>
-                    </select>
-                    <br><br>
-                    <label>choose an animal</label>
-                    <br>
-                    <label class="icons" for="opt-1"> 🐱 
-                    <input type="radio" value="cat" name="btn-radio" id="opt-1"></label>
-                    <label class="icons" for="opt-2"> 🐶 
-                    <input type="radio" value="dog" name="btn-radio" id="opt-2"></label>
-                    <label class="icons" for="opt-3"> 🦊 
-                    <input type="radio" value="fox" name="btn-radio" id="opt-3"></label>
-                    <label class="icons" for="opt-4"> 🐬
-                    <input type="radio" value="dolphin" name="btn-radio" id="opt-4"></label>
-                    <br><br>
-                    <label>choose one or more symbols</label>
-                    <br>
-                    <label class="icons" for="check-1"> 📼 
-                    <input type="checkbox" value="1" id="check-1" name="btn-check"></label>
-                    <br>
-                    <label class="icons" for="check-2"> 🕹 
-                    <input type="checkbox" value="2" id="check-2" name="btn-check"></label>
-                    <br>
-                    <label class="icons" for="check-3"> 📻 
-                    <input type="checkbox" value="3" id="check-3" name="btn-check"></label>
-                    <br>
-                    <label class="icons" for="check-4"> 📺 
-                    <input type="checkbox" value="4" id="check-4" name="btn-check"></label>
-                    <br><br><br>
-                    <textarea spellcheck="true"  class="comment-area" placeholder="Comments (optional)"></textarea>
-                    <br>
-                    <button type="submit" id="submit">SEND</button>
-                </fieldset>
-            </section>
-
-        </fieldset>
-    </form>
-
-
-<script src=""></script>    
+<body class="body"> 
+    <div class="page">
+        <form id="survey" class="form">
+            <fieldset class="fieldset card">
+                <section class="section card-content">
+                    <h1 id="title" class="title card-title">SURVEY</h1>
+                    <p id="description" class="description">* Required fields</p>
+    
+                    <fieldset class="fieldset card-fields">
+                        <label id="name-label" for="name" class="card-label">name</label>
+                        <input type="text" class="txt" required placeholder="insert your name" id="name">
+                        <br>
+                        <label id="email-label" for="email" class="card-label">email</label>
+                        <input type="email" class="txt" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="insert your email" id="email">
+                        <br>
+                        <label id="number-label" for="number" class="card-label">ID</label>
+                        <input type="number" class="txt" required pattern=“^[0–9]$” min="1" max="99" placeholder="user ID" id="number">
+                    </fieldset>
+                    <fieldset class="fieldset card-fields">
+                        <label class="card-label">choose a color</label>
+                        <select id="dropdown" class="dropdown menu">
+                            <option value="black" class="menu-item">black</option>
+                            <option value="white" class="menu-item">white</option>
+                            <option value="red" class="menu-item">red</option>
+                            <option value="blue" class="menu-item">blue</option>
+                            <option value="yellow" class="menu-item">yellow</option>
+                        </select>
+                        <br><br>
+                        <label class="card-label">choose an animal</label>
+                        <br>
+                        <label class="card-icons" for="opt-1"> 🐱 
+                        <input type="radio" class="radio" value="cat" name="btn-radio" id="opt-1"></label>
+                        <label class="card-icons" for="opt-2"> 🐶 
+                        <input type="radio" class="radio" value="dog" name="btn-radio" id="opt-2"></label>
+                        <label class="card-icons" for="opt-3"> 🦊 
+                        <input type="radio" class="radio" value="fox" name="btn-radio" id="opt-3"></label>
+                        <label class="card-icons" for="opt-4"> 🐬
+                        <input type="radio" class="radio" value="dolphin" name="btn-radio" id="opt-4"></label>
+                        <br><br>
+                        <label class="card-label">choose one or more symbols</label>
+                        <br>
+                        <label class="card-icons" for="check-1"> 📼 
+                        <input type="checkbox" class="checkbox" value="1" id="check-1" name="btn-check"></label>
+                        <br>
+                        <label class="card-icons" for="check-2"> 🕹 
+                        <input type="checkbox" class="checkbox" value="2" id="check-2" name="btn-check"></label>
+                        <br>
+                        <label class="card-icons" for="check-3"> 📻 
+                        <input type="checkbox" class="checkbox" value="3" id="check-3" name="btn-check"></label>
+                        <br>
+                        <label class="card-icons" for="check-4"> 📺 
+                        <input type="checkbox" class="checkbox" value="4" id="check-4" name="btn-check"></label>
+                        <br><br><br>
+                        <textarea spellcheck="true"  class="card-txt-area" placeholder="Comments (optional)"></textarea>
+                        <br>
+                        <button type="submit" id="submit">SEND</button>
+                    </fieldset>
+                </section>
+    
+            </fieldset>
+        </form>
+    
+    </div>  
+    
 </body>
 </html>

@@ -1,37 +1,60 @@
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-html,
-body,
-form,
-fieldset,
-section,
-h1,
-p,
-label,
-input,
-select,
-option,
-button,
-textarea {
   margin: 0;
   padding: 0;
-  font-family: monospace;
-  font-size: 100%;
+  border: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.page {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+}
+
+.page .form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: grey;
+}
+
+.page .form .fieldset {
+  padding: 2.4rem;
+}
+
+.page .form .fieldset .section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
@@ -39,10 +62,19 @@ textarea {
           justify-content: center;
 }
 
-button {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  width: 50%;
+.page .form .fieldset .section .card-label {
+  text-transform: uppercase;
+  margin: 0.6rem 0 0.6rem 0;
+}
+
+.page .form .fieldset .section .txt {
+  position: absolute;
+  margin: 0.4rem 0 0.4rem 0;
+  left: 35%;
+}
+
+.page .form .fieldset .description {
+  text-transform: capitalize;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=grid.css.map */
